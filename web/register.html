@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/register.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <span class="registerSpan">账号注册</span>
+        <a href="login.html" ><span class="loginHref">已有账号请登录</span></a>
+        <br>
+        <br>
+    
+    <div class="input-group">
+    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+    <input type="text"  placeholder="用户名"  class="form-control" aria-describedby="basic-addon1" id="userName" name="用户名" onblur="checkNull(this)">
+    </div>
+        <p id="userNameError"></p>
+    
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text"  placeholder="真实姓名"  class="form-control" aria-describedby="basic-addon2"  name="真实姓名" id="trueName" onblur="checkNull(this)">
+        </div>
+        <p id="trueNameError"></p>
+    
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input type="text"  placeholder="邮箱"  class="form-control" aria-describedby="basic-addon3" id="email" name="邮箱" onblur="checkNull(this)">
+        </div>
+        <p id="emailError"></p>
+    
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon4"><span class="glyphicon glyphicon-globe"></span></span>
+            <select class="form-control" aria-describedby="basic-addon4" id="province" name="省份" onblur="checkNull(this)">
+                <option value="">请选择省份</option>
+            </select>
+        </div>
+        <p id="provinceError"></p>
+    
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon5" ><span class="glyphicon glyphicon-globe"></span></span>
+            <select class="form-control"  aria-describedby="basic-addon5" id="city" name="城市" onblur="checkNull(this) ">
+                <option value="">请选择城市</option>
+            </select>
+        </div>
+        <p id="cityError"></p>
+    
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon6" ><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password"  placeholder="密码" name="密码" class="form-control" aria-describedby="basic-addon6" id="password" onblur="checkNull(this)">
+        </div>
+        <p id="passwordError"></p>
+    
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon7"><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password"  placeholder="确认密码" name="确认密码" class="form-control" aria-describedby="basic-addon7" id="ensurePassword" onblur="checkNull(this)">
+        </div>
+        <p id="ensurePasswordError"></p>
+        <input type="button" value="注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册" class="signBtn" onclick="register()">
+        <p id="registerError"></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+</head>
+
+<body>
+    <div id="loginForm">
+        <form action="login.do" method="POST">
+            <p><input type="text" id="userName" name="userName" placeholder="用户名" onblur="checkNull(this)"></p>
+            <p id="userNameError"></p>
+            <p><input type="password" id="password" name="password" placeholder="密码" onblur="checkNull(this)"></p>
+            <p id="passwordError"></p>
+            <p><input type="text" id="vcode" name="vcode" placeholder="验证码" onblur="checkNull(this)">
+                <img src="servlet/CreateVerifyCodeImage" onclick="changeImg()" id="verifyCode" title="看不清，换一张">
+            </p>
+            <p id="vcodeError"></p>
+            <p style="color: #ffffff"><input type="checkbox" checked="checked" id="checkBox"/>一周内免登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="register.html">免费注册</a></p>
+            <p><input type="button" id="btLogin" value="登&nbsp;&nbsp;录" onclick="ajaxCheckLogin()"></p>
+            <p id=checkError></p>
+        </form>
+    </div>
+</body>
+</html>
